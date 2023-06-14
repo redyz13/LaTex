@@ -1,0 +1,82 @@
+\section{Ricerca}
+Trovare un elemento $k$ in un array 
+ordinato in tempo $O(\log n)$ tramite il paradigma Divide et Impera.
+
+\subsubsection*{Relazione di ricorrenza:}
+
+$$T(n) \le
+\begin{cases}
+    c_0 & \text{se $n \le 1$ } \text{oppure $k$ è l'elemento centrale}\\
+    T(n/2) + c & \text{altrimenti}
+\end{cases} $$
+
+\subsubsection*{Algoritmo:}
+
+\begin{algorithm}[H]
+\caption{Ricerca binaria ricorsiva}
+\label{alg1}
+\begin{algorithmic}[1]
+\STATE RicercaBinariaRicorsiva(a, k, sinistra, destra):
+\begin{ALC@g}
+\IF{(sinistra $>$ destra)}
+    \RETURN -1
+\ENDIF
+\STATE c = (sinistra + destra) / 2
+\IF{k == a[c]}
+    \RETURN c
+\ENDIF
+\IF{sinistra == destra}
+    \RETURN -1
+\ENDIF
+\IF{(k $<$ a[c])}
+    \RETURN RicercaBinariaRicorsiva(a, k, sinistra, c-1)
+\ELSE
+    \RETURN RicercaBinariaRicorsiva(a, k, c+1, destra)
+\ENDIF
+\end{ALC@g}
+\end{algorithmic}
+\end{algorithm}
+
+Algoritmo \ref{alg1}:
+nota\footnotemark{}.\\
+\lipsum[1]
+
+\footnotetext{Forza paolo}
+\newpage
+
+\subsection{Esempio di utilizzo}
+Trovare l'ultima occorrenza di un elemento $x$ in un array 
+ordinato in tempo $O(\log n)$ tramite il paradigma Divide et Impera.
+
+\subsubsection*{Algoritmo:}
+
+\begin{algorithm}[H]
+\caption{Ultima occorrenza}
+\label{alg2}
+\begin{algorithmic}[1]
+\STATE UltimaOccorrenza(a, l, r, x):
+\begin{ALC@g}
+\IF{l $>$ r}
+    \RETURN -1
+\ENDIF
+\IF{l == r $\land$ a[l] == x}
+    \RETURN l
+\ELSE
+    \RETURN -1
+\ENDIF
+\STATE c = (l + r) / 2
+\IF{a[c] $\leq$ x}
+    \RETURN $\max$(c, UltimaOccorrenza(a, c + 1, r, x))
+\ELSE
+    \RETURN UltimaOccorrenza(a, l, c - 1, x)
+\ENDIF
+\end{ALC@g}
+\end{algorithmic}
+\end{algorithm}
+
+Algoritmo \ref{alg2}:
+nota\footnotemark{}.\\
+\lipsum[2]
+
+\footnotetext{Forzaa paolo}
+\newpage

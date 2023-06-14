@@ -1,0 +1,110 @@
+\begin{multicols*}{2}
+[\section*{Blocco 2}]
+
+\subsection*{Variabili aleatorie}
+\begin{itemize}
+    \item $\{\omega \in \Omega : X(\omega) \in B\} \in \mathscr{F}$
+    \item $\{\omega \in \Omega : X(\omega) \le x\} \in \mathscr{F}$
+\end{itemize}
+
+\subsection*{Funzione di distribuzione}
+$$
+F_X(x) = P(X \le x) = P(\{\omega \in \Omega : X(\omega) \le x\})
+$$
+Altre probabilità che $x$ appartenga a un qualsiasi Boreliano:
+\begin{enumerate}
+    \item $P(X < x) = F_X(x^-)$
+    \item $P(X = x) = F_X(x) - F_X(x^-)$
+    \item $P(x_1 < X < x_2) = F_X(x_2^-) - F_X(x_1)$
+    \item $P(x_1 < X \le x_2) = F_X(x_2) - F_X(x_1)$
+    \item $P(x_1 \le X < x_2) = F_X(x_2^-) - F_X(x_1^-)$
+    \item $P(x_1 \le X \le x_2) = F_X(x_2) - F_X(x_1^-)$
+    \item $P(X > x) = 1 - F_X(x)$
+    \item $P(X \ge x) = 1 - F_X(x^-)$
+\end{enumerate}
+
+\subsection*{Variabili aleatorie discrete}
+$$
+P(X \in S_x) = \sum_{r : x_r \in S_x}P(X = X_r) = 1
+$$
+$P(X = x_r)$ definisce la funzione di probabilità
+$$
+p_X(x) = P(X = x) =
+\begin{cases}
+    p_n & x = x_n (n = 1,2,\dots)\\
+    0 & \text{altrimenti}
+\end{cases}
+$$
+La funzione di distribuzione può essere espressa come
+$$
+F_X(x) = P(X \le x) = \sum_{n: x_n \le x} pn \ (x \in \mathbb{R})
+$$
+
+\subsection*{Variabili aleatorie assolutamente continue}
+$$F_X(x) = \int_{-\infty}^{x} f_X(y)dy$$
+$f_X(y) = $ densità di probabilità
+$$f_X(x) = \frac{dF_X(x)}{dx}$$
+
+\subsubsection*{Proprietà}
+\begin{itemize}
+    \item $P(X = x) = 0$
+    \item $f_X(x) \ge 0$
+    \item $\displaystyle \int_{-\infty}^{+\infty}f_X(x)dx=1$
+    \item $P(X > x) = \displaystyle \int_{x}^{+\infty}f_X(x)dx$
+    \item $P(a \le X \le b) = \displaystyle \int_{a}^{b}f_X(x)dx=F_X(b)-F_X(a)$
+    \item $P(X \in B) = \displaystyle \int_{B}f_X(z)dz$
+\end{itemize}
+
+\subsection*{Valore medio}
+Variabile aleatoria discreta:
+$$
+E(X) = \sum_{r: x_r \in S}x_r p_X(x_r)
+$$
+Variabile aleatoria assolutamente continua:
+$$
+E(X) = \int_{-\infty}^{+\infty}x f_X(x)dx
+$$
+
+\subsection*{Momenti di una variabile aleatoria}
+Momento di ordine $n$:
+$$
+\mu_n = E(X^n) \implies \mu_n=\sum_{r: x_r \in S}x_r^n p_X(x_r)
+$$
+Momento centrale:
+\begin{align*}
+\overline{\mu_n} = E[(X-E(X))^n] \implies
+\\\overline{\mu_n}=\sum_{r: x_r \in S}(x_r-\mu_1)^n p_X(x_r)
+\end{align*}
+
+\subsection*{Varianza}
+\begin{align*}
+\mathit{Var}(x) = E(X^2) - [E(X)]^2 =
+\\\sum_{r: x_r \in S}(x_r - \underbrace{\mu_1}_{\text{media}})^2 p_X(x_r)
+\end{align*}
+
+\end{multicols*}
+
+\newpage
+\subsection*{Variabili aleatorie discrete (distribuzione uniforme)}
+Sia $x = 1,2,\dots,n$ tutti con la stessa probabilità $X \sim \mathscr{U}_d(n) $
+\begin{align*}
+    P_X(x) &=
+    \begin{cases}
+        \frac{1}{n} & x = 1,2,\dots,n\\
+        0 & \text {altrimenti}
+    \end{cases}
+    \\
+    F_X(x) = P(X \le x) &=
+    \begin{cases}
+        0 & x < 1\\
+        \frac{k}{n} & k \le x < k + 1 \ (k = 1,2,\dots,n-1)\\
+        1 & x \ge n
+    \end{cases}
+\end{align*}
+Se $n = 1$ allora è una distribuzione degenere e vale
+$$
+E(X) = \frac{n+1}{2}
+$$
+$$
+\mathit{Var}(X) = \frac{n^2-1}{12}
+$$

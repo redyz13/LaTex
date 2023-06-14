@@ -1,0 +1,5 @@
+PWD d:/Workspace/Latex/formularioCPSM
+INPUT d:/Tools/TinyTeX/texmf.cnf
+INPUT d:/Tools/TinyTeX/texmf-dist/web2c/texmf.cnf
+INPUT d:/Tools/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT d:/Workspace/Latex/formularioCPSM/main.tex

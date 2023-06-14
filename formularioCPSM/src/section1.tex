@@ -1,0 +1,113 @@
+\begin{multicols*}{2}
+[\section*{Blocco 1}]
+
+\subsection*{Assiomi della probabilità}
+\begin{enumerate}
+    \item $P(A) \ge 0 \ \forall A \in \mathscr{F}$
+    \item $P(\Omega) = 1$
+    \item Se $\{A_n: n = 1,2,\dots\}$ è una successione di eventi
+    incompatibili di $\mathscr{F}$, cioè una famiglia di eventi di $\mathscr{F}$ tale che:
+    $$A_i \cap A_j = \text{\O} \ \forall \ i,j < 1,2,\dots \text{con } i \neq j \text{ allora}$$
+    $$P \left(\bigcup^{+\infty}_{n=1} A_n = \sum_{n=1}^{+\infty}P(A_n)\right)$$
+\end{enumerate}
+
+\subsection*{Fatto 1}
+Se $A \subset B$ possiamo esprimere $B$ come $B = A\cup (\overline{A} \cap B)$ 
+da cui deriva $P(B) = P(A) + P(\overline{A} \cap B)$
+
+\subsection*{Fatto 2}
+Se $A \subset B \implies P(A) \le P(B)$
+
+\subsection*{Fatto 3}
+\begin{itemize}
+    \item $A = A \cap \Omega = A \cap (B \cup \overline{B}) = (A \cap B) \cup (A \cap \overline{B})$
+    \item $\overline{A} = \overline{A} \cap \Omega = \overline{A} \cap (B \cup \overline{B}) = (\overline{A} \cap B) \cup (\overline{A} \cap \overline{B})$
+    \item $P(A \cap \overline{B}) = P(A) - P(A \cap B)$
+\end{itemize}
+
+\subsection*{Disuguaglianza di Boole}
+$$P \left(\bigcup^{+\infty}_{n=1} A_n \le \sum_{n=1}^{+\infty}P(A_n)\right)$$
+
+\subsection*{Teorema}
+\begin{align*}
+P(A_1 \cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap A_2) \\\text{ con $A_1$ e $A_2$ non incompatibili}
+\end{align*}
+
+\subsection*{Proposizione}
+\begin{itemize}
+    \item $P(A_1) = 0 \implies P(A_1 \cap A_2) = 0, \ P(A_1 \cup A_2) = P(A_2)$
+    \item $P(A_1) = 1 \implies P(A_1 \cap A_2) = P(A_2), \ P(A_1 \cup A_2) = 1$
+\end{itemize}
+
+\subsection*{Indipendenza}
+Siano $A$ e $B$ eventi di $\mathscr{F}$. Si dicono indipendenti se risulta:
+$$P(A \cap B) = P(A)P(B)$$
+Se $P(A) = 0$ o $P(A) = 1$, dato un altro evento $B$ si ha che $A$ e $B$ sono indipendenti.
+
+\smallbreak
+Se $A$ e $B$ sono indipendenti:
+\begin{enumerate}
+    \item $A$ e $\overline{B}$ lo sono
+    \item $\overline{A}$ e $B$ lo sono
+    \item $\overline{A}$ e $\overline{B}$ lo sono
+\end{enumerate}
+Se $A$ e $B$ sono indipendenti allora:
+$$P(A \cup B) = 1 - P(\overline{A})P(\overline{B})\text{ anche per più eventi}$$
+$$P(A_1 \cap A_2 \cap A_3) = P(A_1)P(A_2)P(A_3)$$
+
+\subsection*{Probabilità condizionata}
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{N(A \cap B)}{N(\Omega)} \cdot \frac{N(\Omega)}{N(B)}
+$$
+
+\subsection*{Teorema}
+\begin{enumerate}
+    \item $P(A|B) \ge 0 \ \forall A \in \mathscr{F}$
+    \item $P(\Omega | B) = 1$
+    \item Se $\{A_n: n = 1,2,\dots\}$ è una successione di eventi
+    incompatibili di $\mathscr{F}$, allora
+    $$A_i \cap A_j = \text{\O} \ \forall \ i,j < 1,2,\dots \text{con } i \neq j \text{ allora}$$
+    $$P \left(\bigcup^{+\infty}_{n=1} A_n | B = \sum_{n=1}^{+\infty}P(A_n | B) \right)$$
+\end{enumerate}
+
+\subsection*{Osservazione}
+$$
+P(B|A) = \frac{P(B \cap A)}{P(A)}
+$$
+
+\subsection*{Proposizione}
+Se $A$ e $B$ sono eventi di $\mathscr{F}$ con $P(A) > 0$ e $P(B) > 0$ allora
+\begin{enumerate}
+    \item $P(A \cap B) = P(A)P(B)$
+    \item $P(A|B) = P(A)$
+    \item $P(B|A) = P(B)$
+\end{enumerate}
+
+\subsection*{Legge delle alternative}
+Sia $\{B_n : n = 1,2,\dots,k\}$ un insieme completo di alternative e sia $A$ 
+un evento di $\mathscr{F}$. Risulta:
+$$
+P(A) = \sum_{n=1}^{k}P(A|B_n)P(B_n)
+$$
+Esempio per due: $P(A_2) = P(A_1)P(A_2 | A_1) + P(\overline{A_1})P(A_2 | \overline{A_1})$
+
+\end{multicols*}
+
+\subsection*{Teorema}
+Sia $\{B_n : n = 1,2,\dots,k\}$ un insieme di alternative per l'evento $B \in \mathscr{F}$ e
+sia $A$ un evento di $\mathscr{F}$. La probabilità $A$ condizionata da $B$ è esprimibile come
+$$
+P(A|B) = \sum_{n=1}^{k}P(A | B_n)P(B_n|B)
+$$
+
+\subsection*{Legge di Bayes}
+Sia $\{B_n : n = 1,2,\dots,k\}$ un insieme di eventi incompatibili di $\mathscr{F}$: 
+$P(B_n > 0)$ per $n = 1,2,\dots,k$ e sia $A \in \mathscr{F}$ un evento con $P(A) > 0$.\\
+Se $\displaystyle A \subset \bigcup_{n=1}^{k} B_n$ per $n = 1,2,\dots,k$ si ha
+$$
+P(B_n|A) = \frac{P(B_n)P(A|B_n)}{\displaystyle \sum_{i=1}^{k}P(B_i)P(A|B_i)}
+$$
+$$
+P(B_n|A) = \frac{P(A|B_n)P(B_n)}{P(A)} = \frac{P(A|B_n)P(B_n)}{\displaystyle 
+\sum_{i=1}^{k}P(A|B_i)P(B_i)}
+$$

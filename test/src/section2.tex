@@ -1,0 +1,82 @@
+\section{Interval Scheduling Pesato}
+Risoluzione del problema dell'Interval Scheduling Pesato.
+
+\paragraph{Relazione di ricorrenza:}
+
+$$\mathit{OPT}(j) =
+\begin{cases}
+    0 & \text{se $j = 0$ }\\
+    \max(v_j + \mathit{OPT}(p(j)), \mathit{OPT}(j-1)) & \text{altrimenti}
+\end{cases} $$
+
+\subsubsection*{Esecuzione esterna:}
+
+\begin{algorithmic}[1]
+\STATE Input: $\mathrm{n, s_1, \dots, s_n, f_1, \dots, f_n, v_1, \dots, v_n}$
+\STATE Ordina i job per tempi di fine in modo che $\mathrm{f_1 \le f_2 \le \dots \le f_n}$
+\STATE Calcola $\mathrm{p(1), p(2), \dots, p(n)}$
+\FOR{j = 1 to n}
+    \STATE{M[j] = \O} \COMMENT{Array globale}
+\ENDFOR
+\end{algorithmic}
+
+\subsubsection*{Algoritmo:}
+
+\begin{algorithm}[H]
+\caption{M-Compute-Opt}
+\label{alg3}
+\begin{algorithmic}[1]
+\STATE M-Compute-Opt(j):
+\begin{ALC@g}
+\IF{j = 0}
+\RETURN 0
+\ENDIF
+\IF{M[j] = \O}
+\STATE M[j] = $\mathrm{\max(v_j + \text{M-Compute-Opt}(p(j)),\
+\text{M-Compute-Opt}(j - 1))}$
+\ENDIF
+\RETURN M[j]
+\end{ALC@g}
+\end{algorithmic}
+\end{algorithm}
+
+Algoritmo \ref{alg3}:
+nota\footnotemark{}.\\
+
+\begin{theorem}[Correttezza di M-Compute-Opt]
+\label{the1}
+L'algoritmo computa correttamente OPT(j)
+\end{theorem}
+
+\begin{proof}
+Per induzione.
+\medbreak
+
+Caso base $j = 0$. Il valore restituito è correttamente 0.
+\medbreak
+
+Passo induttivo. Consideriamo un certo $j > 0$ e supponiamo (ipotesi induttiva) 
+che l'algoritmo produca il valore corretto di $\mathit{OPT}(i)$ per ogni $i < j$.
+Il valore computato per $j$ dall'algoritmo è:
+\bigbreak
+
+M-Compute-Opt($j$) = $\max(v_j + \text{M-Compute-Opt}(p(j)),\
+\text{M-Compute-Opt}(j - 1))$
+\bigbreak
+
+Siccome per ipotesi induttiva:
+\begin{itemize}
+    \item Valore computato da M-Compute-Opt($p(j$)) = $\mathit{OPT}(p(j))$ e
+    \item Valore computato da M-Compute-Opt($j - 1$) = $\mathit{OPT}(j - 1)$
+\end{itemize}
+\newpage
+
+Allora ne consegue che:
+\bigbreak
+
+M-Compute-Opt[$j$] = $\max(v_j + \mathit{OPT}(p(j)),\
+\mathit{OPT}(j - 1)) = \mathit{OPT}(j)$
+\end{proof}
+
+\footnotetext{Forzaaa paolo}
+\newpage
