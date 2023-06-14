@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.24)  14 JUN 2023 02:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.24)  14 JUN 2023 02:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -457,6 +457,42 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{d:/Tools/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-!pdfTeX error: pdflatex.exe (file d:/Tools/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map): fflush() failed (Invalid argument)
- ==> Fatal error occurred, no output PDF file produced!
+{d:/Tools/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\openout2 = `src/section1.aux'.
+
+ (./src/section1.tex [2
+
+]) [3]
+\openout2 = `src/section2.aux'.
+
+ (./src/section2.tex [4
+
+
+
+]) [5]
+\openout2 = `src/section3.aux'.
+
+ (./src/section3.tex [6
+
+
+
+] [7]) (out/main.aux (out/src/section1.aux) (out/src/section2.aux) (out/src/section3.aux))
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 11897 strings out of 478005
+ 191935 string characters out of 5838156
+ 1877845 words of memory out of 5000000
+ 31763 multiletter control sequences out of 15000+600000
+ 523566 words of font info for 76 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 75i,16n,77p,575b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <d:/Tools/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><d:/Tools/TinyTeX/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on out/main.pdf (7 pages, 204194 bytes).
+PDF statistics:
+ 219 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

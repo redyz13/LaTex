@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1686701159 "d:/Workspace/Latex/formularioCPSM/main.tex" "out/main.pdf" "main" 1686701159 0
+["pdflatex"] 1686704423 "d:/Workspace/Latex/formularioCPSM_nocol/main.tex" "out/main.pdf" "main" 1686704423 0
   "d:/Tools/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1684898334 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "d:/Tools/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1684898329 1004 54797486969f23fa377b128694d548df ""
   "d:/Tools/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1684898329 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -118,13 +118,13 @@
   "d:/Tools/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1685024957 11524 17794f9a4e48ccf30922b9fe43dc1901 ""
   "d:/Tools/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1684954621 6538373 8be94a86188189693db25d45db704ed9 ""
   "d:/Tools/TinyTeX/texmf.cnf" 1684898309 903 164c5b127cd0d6dc91abad2f62421ea2 ""
-  "d:/Workspace/Latex/formularioCPSM/main.tex" 1686696218 643 86fb229823738f5fd335baaba4c76518 ""
+  "d:/Workspace/Latex/formularioCPSM_nocol/main.tex" 1686696218 643 86fb229823738f5fd335baaba4c76518 ""
   "main.tex" 1686696218 643 86fb229823738f5fd335baaba4c76518 ""
-  "out/main.aux" 1686701159 734 f178cd568f0f3fcdb5f5d3b439769447 "pdflatex"
-  "out/main.out" 1686701159 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "out/src/section1.aux" 1686701159 636 8e171841b4c102685a15da9f668579c3 "pdflatex"
-  "out/src/section2.aux" 1686701159 636 8d17881d0f265d4a30e68fbdfe7e8595 "pdflatex"
-  "out/src/section3.aux" 1686701159 637 3cd1068a89ef8f83528f7f39c565bb09 "pdflatex"
+  "out/main.aux" 1686704423 734 f178cd568f0f3fcdb5f5d3b439769447 "pdflatex"
+  "out/main.out" 1686704423 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "out/src/section1.aux" 1686704423 636 8e171841b4c102685a15da9f668579c3 "pdflatex"
+  "out/src/section2.aux" 1686704423 636 8d17881d0f265d4a30e68fbdfe7e8595 "pdflatex"
+  "out/src/section3.aux" 1686704423 637 3cd1068a89ef8f83528f7f39c565bb09 "pdflatex"
   "src/section1.tex" 1686697334 4145 c390862420b4f1721a532a108b65c1c2 ""
   "src/section2.tex" 1686697345 2954 54e08ba8a590c4e24f13911dca165617 ""
   "src/section3.tex" 1686701158 6223 d9bb3b65f314ea4676bce971eb1e7437 ""

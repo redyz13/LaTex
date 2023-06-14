@@ -1,8 +1,8 @@
-PWD d:/Workspace/Latex/formularioCPSM
+PWD d:/Workspace/Latex/formularioCPSM_nocol
 INPUT d:/Tools/TinyTeX/texmf.cnf
 INPUT d:/Tools/TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT d:/Tools/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Workspace/Latex/formularioCPSM/main.tex
+INPUT d:/Workspace/Latex/formularioCPSM_nocol/main.tex
 OUTPUT out/main.log
 INPUT d:/Tools/TinyTeX/texmf-dist/tex/latex/base/article.cls
 INPUT d:/Tools/TinyTeX/texmf-dist/tex/latex/base/article.cls
