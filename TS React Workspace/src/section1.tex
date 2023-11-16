@@ -1,0 +1,180 @@
+\section{Installazione di nvm ed npm}
+Questa sezione comprende la configurazione essenziale per l'implementazione di
+qualsiasi sito web basato su JavaScript. Il primo passo consiste nell'installazione
+di npm (Node Package Manager) che ci permetterà l'installazione di NodeJS e dei vari pacchetti necessari per lavorare con React, TypeScript ed EsLint (il linter che andrò a proporvi).
+
+Il primo passo consiste nell'installazione di nvm (Node Version Manager) che risulta necessario per la gestione delle installazioni di Node ed npm. Guide
+all'installazione:
+\begin{itemize}
+    \item Windows: \url{https://github.com/coreybutler/nvm-windows}
+    \item Linux/MacOS \url{https://github.com/nvm-sh/nvm}
+\end{itemize}
+
+Una volta installato con successo nvm potete procedere all'installazione di npm seguendo la documentazione ufficiale: \url{https://docs.npmjs.com/downloading-and-installing-node-js-and-npm}
+
+\bigskip
+
+Arrivati a questo punto abbiamo gli strumenti necessari per tutte le attività, possiamo passare alla prossima sezione.
+
+\section{Creazione progetto di prova}
+In questa sezione andremo a creare un progetto di prova utilizzando il template React with TypeScript, ciò ci permetterà di verificare che tutto sta procedendo nel modo giusto. Dopo aver creato la cartelle necessaria al progetto aprite il vostro terminale. La prima cosa da fare è inizializzare il progetto per il funzionamento dei pacchetti npm, all'interno della vostra cartella digitate il seguente comando:
+\begin{minted}{bash}
+    npm init
+\end{minted}
+Vi verranno chieste delle informazioni relative al progetto, potete banalmente premere invio senza inserire nulla fino all'ultimo prompt.
+Possiamo finalmente creare il progetto, digitate nel terminale:
+\begin{minted}{bash}
+    npx create-react-app my-app --template typescript
+\end{minted}
+Abbiamo finalmente il progetto, non ci resta che impostare il linter e il formatter, ma prima di questo andremo a configurare Visual Studio Code, l'ambiente di lavoro proposto per tale scopo.
+
+\section{Installazione e configurazione di Visual Studio Code}
+\label{sec3}
+Procediamo banalmente all'installazione dell'editor: \url{https://code.visualstudio.com/}\\
+Fatta questa operazione possiamo passare all'installazione delle estensioni necessarie. Tramite il menù sulla sinistra trovate il pulsante \textit{Extensions} che vi aprirà la schermata del Marketplace dove potete cercare e installare estensioni. Cercate e installate le seguenti estensioni:
+\begin{itemize}
+    \item \textit{esbenp.prettier-vscode} (l'integrazione del nostro formatter)
+    \item \textit{dbaeumer.vscode-eslint} (l'integrazione del nostro linter)
+    \item \textit{christian-kohler.npm-intellisense}
+    \item \textit{ritwickdey.LiveServer}
+    \item \textit{ecmel.vscode-html-css}
+    \item \textit{xabikos.JavaScriptSnippets}
+    \item \textit{formulahendry.auto-rename-tag}
+\end{itemize}
+
+Dopo aver finalmente installato tutte le estensioni, all'interno dell'editor digitate la combinazione di tasti Ctrl + Shift + P e cercate \textit{Open User Settings (JSON)}, trovata l'impostazione premete invio. Questo file JSON non è altro che il file di configurazione dell'editor, da qui andremo a controllare delle impostazioni base, non dovrete far altro che incollare le varie impostazioni che vi indicherò.
+
+Impostiamo la grandezza del font e andiamo a escludere file irrilevanti dal File Tree (il vostro menù di navigazione file):
+\begin{minted}{json}
+{
+  "editor.fontSize": 18,
+  "files.exclude": {
+    "**/__pycache__/": true,
+    "**/._.ini*": true,
+    "**/*.o": true,
+    "**/.vscode/": true
+  },
+}
+\end{minted}
+
+Non ci resta che aggiungere le impostazioni relative al formatter:
+\begin{minted}{json}
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize"
+  },
+}
+\end{minted}
+
+\newpage
+
+\section{Configurazione del linter e del formatter}
+Se siete arrivati fin qui complimenti! Ci resta un'ultima cosa da fare, configurare Prettier ed EsLint, queste operazioni sono molto semplici e si riducono a impostare degli attributi JSON, similmente a come fatto con la Sezione \ref{sec3}.
+
+Partiamo con Prettier: nella root del progetto create un file denominato \textit{.prettierrc}. Creato il file apritelo e inserite le seguenti righe:
+\begin{minted}{json}
+{
+  "singleQuote": true,
+  "printWidth": 80   
+}
+\end{minted}
+
+Concludiamo con EsLint: nella root del progetto create un file denominato \textit{.eslint.json}. Creato il file (se il file è già presente andate a sovrascriverne il contenuto) apritelo e inserite le seguenti righe:
+ 
+\begin{minted}{json}
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "max-len": ["warn", { "code": 80 }],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "fragment": "Fragment",
+      "version": "detect",
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps",
+      { "property": "freeze", "object": "Object" },
+      { "property": "myFavoriteWrapper" },
+      { "property": "forbidExtraProps", "exact": true }
+    ],
+    "componentWrapperFunctions": [
+      "observer",
+      { "property": "styled" },
+      { "property": "observer", "object": "Mobx" },
+      { "property": "observer", "object": "<pragma>" }
+    ],
+    "formComponents": [
+      "CustomForm",
+      { "name": "Form", "formAttribute": "endpoint" }
+    ],
+    "linkComponents": [
+      "Hyperlink",
+      { "name": "Link", "linkAttribute": "to" }
+    ]
+  }
+}
+\end{minted}
+
+Fatto ciò abbiamo terminato l'intera configurazione (che belloooo). Spero che tutto ciò vi sarà d'aiuto e che potremmo beneficiarne tutti noi, grazie della lettura e buona giornata \verb|^^|

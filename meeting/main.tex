@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[italian]{babel}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{mathrsfs}
+% \usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage[hidelinks]{hyperref}
+
+\title{Meeting 23/10}
+\author{Esistere}
+\date{Ottobre 2023}
+
+\newtheorem{theorem}{Teorema}[section]
+
+\numberwithin{footnote}{section}
+\renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\include{src/section1}
+
+\end{document}
