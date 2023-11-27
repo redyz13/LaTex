@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[italian]{babel}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage[hidelinks]{hyperref}
+\usepackage{minted}
+\usepackage{blindtext}
+
+\title{TS React Workspace}
+\author{Antonio}
+\date{Novembre 2023}
+
+\newtheorem{theorem}{Teorema}[section]
+
+\numberwithin{footnote}{section}
+\renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
+\hypersetup {
+    colorlinks=true,
+    linkcolor=black,
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Ciao team members! Ho pensato di creare questo documento per proporvi l'utilizzo
+di tecnologie di linting e formatting, ciò ci permetterà innanzitutto un controllo
+degli errori (che risulta inesistente in JavaScript) e delle linee guida stilistiche, oltre che un auto-formattazione per far sì che il codice sia consistente. Naturalmente prendete tutto ciò come una proposta, non ho nessuna 
+autorità per imporvi di utilizzare tali tecnologie, anzi, l'obiettivo è
+semplificarci la vita; sono ben accetti suggerimenti. Nel caso si presentasse qualsivoglia problema contattatemi pure, cercherò di aiutarvi meglio che posso. Buona lettura e buona installazione!
+\end{abstract}
+
+\tableofcontents
+
+\include{src/section1}
+
+\end{document}
