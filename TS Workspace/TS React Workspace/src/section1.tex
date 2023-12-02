@@ -1,7 +1,7 @@
 \section{Installazione di nvm ed npm}
 Questa sezione comprende la configurazione essenziale per l'implementazione di
-qualsiasi sito web basato su JavaScript. Il primo passo consiste nell'installazione
-di npm (Node Package Manager) che ci permetterà l'installazione di NodeJS e dei vari pacchetti necessari per lavorare con React, TypeScript ed EsLint (il linter che andrò a proporvi).
+qualsiasi sito web basato su JavaScript. Iniziamo con l'installazione
+di npm (Node Package Manager) che ci permetterà di installare anche NodeJS e i vari pacchetti necessari per lavorare con React, TypeScript ed EsLint (il linter che andrò a proporvi).
 
 Il primo passo consiste nell'installazione di nvm (Node Version Manager) che risulta necessario per la gestione delle installazioni di Node ed npm. Guide
 all'installazione:
@@ -17,12 +17,7 @@ Una volta installato con successo nvm potete procedere all'installazione di npm 
 Arrivati a questo punto abbiamo gli strumenti necessari per tutte le attività, possiamo passare alla prossima sezione.
 
 \section{Creazione progetto di prova}
-In questa sezione andremo a creare un progetto di prova utilizzando il template React with TypeScript, ciò ci permetterà di verificare che tutto sta procedendo nel modo giusto. Dopo aver creato la cartelle necessaria al progetto aprite il vostro terminale. La prima cosa da fare è inizializzare il progetto per il funzionamento dei pacchetti npm, all'interno della vostra cartella digitate il seguente comando:
-\begin{minted}{bash}
-    npm init
-\end{minted}
-Vi verranno chieste delle informazioni relative al progetto, potete banalmente premere invio senza inserire nulla fino all'ultimo prompt.
-Possiamo finalmente creare il progetto, digitate nel terminale:
+In questa sezione andremo a creare un progetto di prova utilizzando il template React with TypeScript, ciò ci permetterà di verificare che tutto sta procedendo nel modo giusto. Dopo aver creato la cartella necessaria al progetto aprite il vostro terminale. Tutto ciò che ci serve fare è creare il progetto: all'interno della vostra cartella digitate il seguente comando:
 \begin{minted}{bash}
     npx create-react-app my-app --template typescript
 \end{minted}
@@ -106,13 +101,14 @@ Partiamo con Prettier: nella root del progetto create un file denominato \textit
 }
 \end{minted}
 
-Concludiamo con EsLint: nella root del progetto create un file denominato \textit{.eslint.json}. Creato il file (se il file è già presente andate a sovrascriverne il contenuto) apritelo e inserite le seguenti righe:
+Concludiamo con EsLint: nella root del progetto create un file denominato \textit{.eslintrc.json}. Creato il file (se il file è già presente andate a sovrascriverne il contenuto) apritelo e inserite le seguenti righe:
  
 \begin{minted}{json}
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "plugin:react/recommended",
